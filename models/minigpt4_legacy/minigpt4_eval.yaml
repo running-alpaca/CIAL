@@ -1,0 +1,32 @@
+model:
+  arch: mini_gpt4
+  model_type:  pretrain_vicuna # pretrain_llama2 pretrain_vicuna
+  freeze_vit: True
+  q_former_model: "./VLMs/model_checkpoints/blip2_pretrained_flant5xxl.pth" # "/VLMs/blip/blip2_pretrained_flant5xxl.pth"
+  llama_model:  "./VLMs/vicuna"     # "./VLMs/vicuna-7b" 13b:vicuna  #/VLMs/LLaMA/models/7B_hf ./VLMs/llama-2-7b-chat-hf
+  freeze_qformer: True
+  max_txt_len: 160
+  end_sym: "###"
+  low_resource: False
+  prompt_path: "./EgoThink/VLMs/MiniGPT-4/prompts/alignment.txt"
+  prompt_template: '###Human: {} ###Assistant: '
+  ckpt:  "./VLMs/model_checkpoints/pretrained_minigpt4_13b.pth" #"./VLMs/model_checkpoints/prerained_minigpt4_7b.pth"  pretrained_minigpt4_13b.pth  #"VLMs/MiniGPT-4/checkpoint/prerained_minigpt4_7b.pth"
+
+
+preprocess:
+  vis_processor:
+    train:
+      name: "blip2_image_train"
+      image_size: 224
+    eval:
+      name: "blip2_image_eval"
+      image_size: 224
+  text_processor:
+    train:
+      name: "blip_caption"
+    eval:
+      name: "blip_caption"
+
+
+run:
+  task: image_text_pretrain
