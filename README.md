@@ -10,6 +10,8 @@ The overall framework of the proposed CIAL method. (a) The causal model of Causa
 
 ## Results
 
+![demo](figs/CIALdemo.gif)
+
 Comparative analysis between LVLM baselines and our proposed CIAL method in the Activity and Localization subsets. Incorrect descriptions are highlighted in red. Correct predictions are bolded in blue.
 
 ![cases](figs/cases.png)
