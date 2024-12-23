@@ -15,11 +15,8 @@ The overall framework of the proposed CIAL method. (a) The causal model of Causa
 Comparative analysis between LVLM baselines and our proposed CIAL method in the Activity, Localization, Forecast, Reasoning and Object subsets. Incorrect descriptions are highlighted in red. Correct predictions are bolded in blue.
 
 ![cases](figs/cases.png)
-
 ![cases1](figs/cases1.png)
-
 ![cases2](figs/cases2.png)
-
 ![cases3](figs/cases3.png)
 
 Comparisons with existing ten large vision-language models on the EgoThink benchmark, including Object (Existence, Attribute, Affordance), Activity, Localization (Location, Spatial Relationship), Reasoning (Counting, Comparison, Situated Reasoning) ,and Forecasting. Bolded values represent the best performance.
